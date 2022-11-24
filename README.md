@@ -49,6 +49,7 @@ jq -R -s 'sub("\n$";"") | split("\n") | { "data": map(split("\t")) }' > list.jso
 ### 3. Generate HTML for all documents
 
 ```bash
+mkdir -p html
 for i in data/*.xml; do
   b=`basename "$i" .xml`
   xsltproc xslt/tei-full.xsl "$i" > html/"$b".html

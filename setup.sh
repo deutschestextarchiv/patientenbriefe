@@ -13,6 +13,7 @@ jq -R -s 'sub("\n$";"") | split("\n") | { "data": map(split("\t")) }' > list.jso
 echo
 
 echo "Generating HTML files ..."
+mkdir -p html
 for i in data/*.xml; do
   b=`basename "$i" .xml`
   echo "  $b ..."
