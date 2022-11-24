@@ -1,0 +1,5 @@
+*.swp
+data
+html/*
+list.json
+tei-sources.tar.bz2
